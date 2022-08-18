@@ -24,23 +24,23 @@ const client = new Instagram(
 ); 
 
 const instagramPostFunction = async () => {
-        wordpsos.randAdjective({count: 1}, async(result)=>{
-            const resultWord = result[0].replace("_"," ");
-        });
+        // wordpsos.randAdjective({count: 1}, async(result)=>{
+        //     const resultWord = result[0].replace("_"," ");
+        // });
         await client.uploadPhoto({
-            photo: './kitchen4.webp',
-            caption: resultWord,
+            photo: './kitchen1.jpg',
+            caption: 'new kitchen',
             post: "feed",
-        }).then((res) => {
+        }).then(async (res) => {
           const media=res.media;
 
           console.log(`https://instagram.com/p/${media.code}`);
 
-          await client.addCommment({
+          await client.addComment({
             mediaId: media.id,
-            text: '#newKitchen'
+            text: 'Amazing kitchen setup' ,
 
-        })
+        });
     });
     };
 

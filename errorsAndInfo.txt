@@ -1,0 +1,14 @@
+Two  errors that I encountered were:
+
+1. cannot read undefined (on reading split) on line 109 of node_modules/instagram-web-api/lib/index.js
+While using _sharedData() in node_modules/instagram-web-api/lib/index.js,
+setting _sharedData to false instead of true on line 49 helps to resolve the 'cannot read undefined (on reading split)' error.
+Setting _sharedData to false might cause other features like follow and getProfile to fail.
+
+2. StatusCodeError : tatusCodeError: 400 - "{\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}"
+The error message 400 popped up but went away when I uploaded a jpg image instead of a webp or png.
+
+
+Info:
+
+1. * * * * * refers to uploading one photo every single day every minute
